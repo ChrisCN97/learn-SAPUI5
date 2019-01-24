@@ -23,10 +23,12 @@ sap.ui.define([
 			};
 			var oModel = new JSONModel(oData);
 			this.setModel(oModel);
+
+			// set dialog
 			this._helloDialog = new HelloDialog(this.getRootControl());
 		},
 
-		exit : function() {
+		exit : function () {
 			this._helloDialog.destroy();
 			delete this._helloDialog;
 		},
@@ -34,6 +36,7 @@ sap.ui.define([
 		openHelloDialog : function () {
 			this._helloDialog.open();
 		}
+
 	});
 
 });
